@@ -1,0 +1,87 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.3 Chrome/130.0.6723.137 Electron/33.2.1 Safari/537.36" version="26.0.3">
+  <diagram name="Sayfa -1" id="y6W9ja44iJC6GA2bng3a">
+    <mxGraphModel dx="1595" dy="957" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Kunq-P4i8gA7VP5_Te1Z-22" value="3. LOAD - Veri Yukleme ve BI Raporlama" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="488" y="2058" width="573" height="182" as="geometry" />
+        </mxCell>
+        <mxCell id="Kunq-P4i8gA7VP5_Te1Z-23" value="2. TRANSFORM - Veri Donusumu ve Temizleme" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="460" y="1378" width="683" height="607" as="geometry" />
+        </mxCell>
+        <mxCell id="Kunq-P4i8gA7VP5_Te1Z-24" value="1. EXTRACT - Veri Cikarimi" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="596" y="1080" width="303" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="Kunq-P4i8gA7VP5_Te1Z-25" value="Kaggle API / Platform" style="rounded=1;whiteSpace=wrap;arcSize=50;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="658" y="1120" width="179" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="Kunq-P4i8gA7VP5_Te1Z-26" value="Raw Data: tweets.csv &#xa; ~14.600 Satir" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="631" y="1217" width="233" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="Kunq-P4i8gA7VP5_Te1Z-27" value="Pandas Engine &#xa; • Regex &amp;amp; Link Temizligi &#xa; • Eksik Veri (NaN) Eliminasyonu &#xa; • Veri Tipi Donusumleri" style="fillColor=none;strokeColor=default;" vertex="1" parent="1">
+          <mxGeometry x="617.5" y="1430" width="260" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Kunq-P4i8gA7VP5_Te1Z-28" value="Staging Area: cleaned_tweets.csv" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="729.5" y="1640" width="278" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="Kunq-P4i8gA7VP5_Te1Z-29" value="Apache Spark (PySpark) &#xa; • Dagitik Veri Isleme&#xa; • Spark SQL &amp; Window Functions &#xa; • Performans Testi (Benchmark)" style="fillColor=none;strokeColor=default;" vertex="1" parent="1">
+          <mxGeometry x="844" y="1770" width="260" height="198" as="geometry" />
+        </mxCell>
+        <mxCell id="Kunq-P4i8gA7VP5_Te1Z-30" value="MongoDB Cluster &#xa; NoSQL Veritabani" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="520" y="2110" width="138" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="Kunq-P4i8gA7VP5_Te1Z-31" value="Matplotlib, Seaborn &amp; WordCloud &#xa; Is Zekasi - BI Raporlama &#xa; Kok Neden &amp; Duygu Analizi" style="rounded=1;whiteSpace=wrap;arcSize=50;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="747" y="2110" width="243" height="111" as="geometry" />
+        </mxCell>
+        <mxCell id="Kunq-P4i8gA7VP5_Te1Z-32" value="Download" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="Kunq-P4i8gA7VP5_Te1Z-25" target="Kunq-P4i8gA7VP5_Te1Z-26">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kunq-P4i8gA7VP5_Te1Z-33" value="Local Export" style="curved=1;startArrow=circle;startFill=0;endArrow=block;exitX=0.81;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="Kunq-P4i8gA7VP5_Te1Z-27" target="Kunq-P4i8gA7VP5_Te1Z-28">
+          <mxGeometry x="0.3486" y="32" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="868" y="1590" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kunq-P4i8gA7VP5_Te1Z-34" value="Distributed Read" style="curved=1;startArrow=none;endArrow=circle;endFill=0;exitX=0.68;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="Kunq-P4i8gA7VP5_Te1Z-28" target="Kunq-P4i8gA7VP5_Te1Z-29">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="974" y="1726" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kunq-P4i8gA7VP5_Te1Z-35" value="Read" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="Kunq-P4i8gA7VP5_Te1Z-26" target="Kunq-P4i8gA7VP5_Te1Z-27">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kunq-P4i8gA7VP5_Te1Z-36" value="Bulk Insert (PyMongo)" style="curved=1;startArrow=none;endArrow=block;exitX=0.1;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="Kunq-P4i8gA7VP5_Te1Z-27" target="Kunq-P4i8gA7VP5_Te1Z-30">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="592" y="1590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kunq-P4i8gA7VP5_Te1Z-37" value="Pandas Read" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=0.32;exitY=1;entryX=0.2;entryY=0;rounded=0;" edge="1" parent="1" source="Kunq-P4i8gA7VP5_Te1Z-28" target="Kunq-P4i8gA7VP5_Te1Z-31">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="762" y="1726" />
+              <mxPoint x="762" y="2058" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kunq-P4i8gA7VP5_Te1Z-38" value="Analitik Metrikler" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.8;entryY=0;rounded=0;" edge="1" parent="1" source="Kunq-P4i8gA7VP5_Te1Z-29" target="Kunq-P4i8gA7VP5_Te1Z-31">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="974" y="2058" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
